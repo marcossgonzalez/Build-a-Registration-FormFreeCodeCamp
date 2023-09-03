@@ -42,16 +42,17 @@
             </fieldset>
             
             <fieldset>
-                <label for="personal-account"><input id="personal-account" type="radio" name="account-type" /> Personal Account </label>
-                <label for="business-account"><input id="business-account" type="radio" name="account-type" /> Business Account </label>
+                <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" /> Personal Account </label>
+                <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business Account </label>
                 <!-- ! Para que mais de um tipo de botão-rádio não seja selecionado
                     ! precisamos fazer com que os botões sejam relacionados
                     * isso é feito usando o atributo 'name' com o valor, no caso
                     * 'account-type'-->
-                <label for="terms-and-conditions"><input name="terms" id="terms-and-conditions" type="checkbox" required /> I accept the 
-                    <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+                <label for="terms-and-conditions"><input name="terms" id="terms-and-conditions" type="checkbox" class="inline" required /> I accept the 
+                    <a href="https://www.freecodecamp.org/news/terms-of-service/" name="conditions" >terms and conditions</a>
                 </label>
             </fieldset>
+
             <fieldset>
                 <label for="profile-picture"> Upload a profile picture:<input id="profile-picture" type="file" name="picture" /></label>
                 <label for="age"> Input your age (years):<input id="age" type="number" min="13" max="120" name="textarea"/>

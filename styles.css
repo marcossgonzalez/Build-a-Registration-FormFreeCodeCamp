@@ -9,6 +9,8 @@ body{
     margin:0;
     background-color: #1b1b32;
     color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
 }
 
 label{
@@ -17,4 +19,60 @@ label{
     da fonte do elemento html */
     margin: 0.5rem 0; /** aqui o elemento rem define primeiro o topo de separação de 0.5 com ênfase e
     **direita com separação de 0 */
+}
+h1, p{
+    margin: 1em auto;
+    text-align: center;
+}
+form{
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vw;
+    padding: 0 0 2em 0;
+}
+fieldset{
+    border: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 3px solid #3b3b4f;
+}
+fieldset:last-of-type /*Isso selecionará o último elemento de um tipo qualquer utilizado*/
+{
+    border-bottom: none;
+}
+input, textarea, select{
+    width: 100%;
+    margin: 10px 0 0 0;
+    min-height: 2em;
+}
+.inline{
+    width: unset;/*Isso remove a regra anterior adicionada no arquivo html*/
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;/*Isso ajusta o alinhamento para o centro da caixa de dados html*/
+}
+input, textarea{
+    background-color: #0a0a23;
+    border: 1px #0a0a23 solid ;
+    color: #FFFFFF;
+    min-height: 2em;
+}
+/**É possível modificar um atributo seletor da seguinte maneira 'input[name="password"]'*/
+input[type="submit"]{
+    display: block;
+    width: 60%;
+    margin: 1em auto 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+}
+input[type="file"]{
+    padding: 1px 2px;/*Isso fará o input de file ser igual ao dos outros inputs*/
+}
+a{
+    color: #dfdfe2;
 }

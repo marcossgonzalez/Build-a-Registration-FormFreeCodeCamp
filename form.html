@@ -15,20 +15,20 @@
         <form action="https://register-demo.freecodecamp.org" method="post">
             <fieldset>
                 <label for="first-name">Enter Your First Name:
-                    <input type="text" id="first-name" required>
+                    <input name="3" type="text" id="first-name" required>
                 </label>
                 <label for="last-name">Enter Your Last Name:
-                    <input type="text" id="last-name" required>
+                    <input name="5" type="text" id="last-name" required>
                 </label>
                 <label for="email">Enter Your Email:
-                    <input type="email" id="email" required >
+                    <input name="7" type="email" id="email" required >
                     <!-- * O atributo de 'minlength' define o tamanho mínimo que cada
                     * entrada deve ter para prevenir que menos do que 'n' dados
                     * sejam enviados como entrada
                     * Vamos colocar isso, então, como atributo na área de senha e de e-mail-->
                 </label>
                 <label for="new-password">Create a New Password:
-                    <input type="password" id="new-password" pattern="[a-z0-5]{8,}" required>
+                    <input name="9" type="password" id="new-password" pattern="[a-z0-5]{8,}" required>
                     <!-- * Cada informação a ser introduzida no formulário precisa possuir
                     * uma forma de colocar o dado, dessa forma, utilizamos o elemento <input> com o tipo
                     * texto-->
@@ -48,13 +48,35 @@
                     ! precisamos fazer com que os botões sejam relacionados
                     * isso é feito usando o atributo 'name' com o valor, no caso
                     * 'account-type'-->
-                <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+                <label for="terms-and-conditions"><input name="terms" id="terms-and-conditions" type="checkbox" required /> I accept the 
+                    <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
                 </label>
             </fieldset>
             <fieldset>
-                <label> Upload a profile picture:<input type="file" /></label>
-                <label> Input your age (years):<input type="number" min="13" max="120" />
+                <label for="profile-picture"> Upload a profile picture:<input id="profile-picture" type="file" name="picture" /></label>
+                <label for="age"> Input your age (years):<input id="age" type="number" min="13" max="120" name="textarea"/>
                 </label>
+                <!-- * Podemos adicionar um menu de seleção de vários tipos
+                  * Esse elemento tem o nome de <select> e é um container
+                    * para um grupo de elementos de <option>.
+                    * cada elemento <option> age como um elemento <label>
+                    * para cada opção da seleção. Ambos elementos requerem o fechamento de suas
+                    * tags.-->
+                <label for="referrer">How did you hear about us?
+                    <select name="16" id="referrer">
+                        <option value="">(select one)</option>
+                        <option value="1">freeCodeCamp News</option>
+                        <option value="2">freeCodeCamp YouTube Channel</option>
+                        <option value="3">freeCodeCamp Forum</option>
+                        <option value="4">Other</option>
+                    <!-- * O elemento de <textarea> age como um elemento de <input>
+                    * que vem com o benefício de escrita em diversas linhas e um número
+                    * inicial de colunas e linhas.
+                    * Podemos usar o elemento para registrar uma biografia ao usuário.-->
+                    </select>
+                </label>
+                <label for="bio">Provide a bio:<textarea id="bio" rows="3" cols="30" 
+                    placeholder="I like coding on the beach...." name="textarea2" ></textarea></label>
             </fieldset>
             <input type="submit" value="Submit">
         </form>
